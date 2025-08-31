@@ -151,33 +151,25 @@ Trước tiên chúng ta sẽ kiểm tra độ dài của username bằng hàm l
 
 **Lưu ý : truy vấn Select length(username) from user;**
 
-  ----------------------------------------------
-  username                            password
-  ----------------------------------- ----------
-  buigiap                             123
+| username | password |
+|----------|----------|
+| buigiap  | 123      |
+| aaaa     | 123      |
+| vvv      | 213      |
+| rrr      | 2312     |
 
-  aaaa                                123
-
-  vvv                                 213
-
-  rrr                                 2312
-  --------------------------------------------
 
 **Kquar**
 
-  ----------------
-  **username**
-  ----------------
-  **7**
+ | username |
+|----------|
+| 7        |
+| 4        |
+| 3        |
+| 3        |
 
-  **4**
 
-  **3**
-
-  **3**
-  ---------------
-
-**Như vậy length(username) = 7 và = 4 và =3 chứ không phải chỉ trả về 1
+Như vậy length(username) = 7 và = 4 và =3 chứ không phải chỉ trả về 1
 giá trị bất kì nào mà nó sẽ trả về đồng thời**
 
 OKE sang tab intruder của burpsuite ta có thể check độ dài có thể có của
