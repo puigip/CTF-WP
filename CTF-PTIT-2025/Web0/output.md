@@ -1,20 +1,16 @@
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image1.png){width="6.5in"
-height="5.723611111111111in"}
-
+incorrect.](./media/media/image1.png)
 Ở bài này ta biết nội dung file index.php mục tiêu là bypass blacklist
 
 Lướt qua trang chủ ta thấy như sau
 
 ![A white screen with orange text AI-generated content may be
-incorrect.](./media/media/image2.png){width="6.507329396325459in"
-height="2.325909886264217in"}
+incorrect.](./media/media/image2.png)
 
 Oke tập trung vào src code
 
 ![A black background with colorful lines AI-generated content may be
-incorrect.](./media/media/image3.png){width="6.5in"
-height="2.4118055555555555in"}
+incorrect.](./media/media/image3.png)
 
 Website nhận 2 tham số user , pass qua method GET để thực hiện câu truy
 vấn
@@ -35,22 +31,19 @@ em tự tìm hiểu )
 KQ nhận được :
 
 ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/media/image4.png){width="6.5in"
-height="1.3409722222222222in"}
+incorrect.](./media/media/image4.png)
 
 OKE đến đây sau 3 ngày ngồi mò các cách bypass backlist để có thể sử
 dụng 1 số hàm đặc biệt thì không cho ra kết quả khả quan . Ngồi đọc lại
 src code thì thấy blacklist bị lỏng lẻo thiết kế sai
 
-![](./media/media/image5.png){width="6.5in"
-height="0.2986111111111111in"}
+![](./media/media/image5.png)
 
 Ở 2 câu lệnh sau trông thì perfect nma không =)) .
 
 Tôi sẽ in ra biến \$forbid để xem kết quả của nó sau 2 lệnh trên là gì
 
-![](./media/media/image6.png){width="6.5in"
-height="0.5291666666666667in"}
+![](./media/media/image6.png)
 
 0x\|0b\|limit\|glob\|php\|load\|inject\|month\|day\|now\|collationlike\|regexp\|limit\|\_\|information\|schema\|char\|sin\|cos\|asin\|procedure\|trim\|pad\|make\|midsubstr\|compress\|where\|code\|replace\|conv\|insert\|right\|left\|cast\|ascii\|x\|hex\|version\|data\|load_file\|out\|gcc\|locate\|count\|reverse\|b\|y\|z\|\--0x\|0b\|limit\|glob\|php\|load\|inject\|month\|day\|now\|collationlike\|regexp\|limit\|\_\|information\|schema\|char\|sin\|cos\|asin\|procedure\|trim\|pad\|make\|midsubstr\|compress\|where\|code\|replace\|conv\|insert\|right\|left\|cast\|ascii\|x\|hex\|version\|data\|load_file\|out\|gcc\|locate\|count\|reverse\|b\|y\|z\|\--
 
@@ -60,7 +53,7 @@ height="0.5291666666666667in"}
 k có nghĩa trong sqlite . Do đó blacklist này để lọt hàm mid , còn
 substr vẫn bị chặn do
 
-*[Cách Regex trong PHP hoạt động]{.underline}*
+*[Cách Regex trong PHP hoạt động]*
 
 > if (preg_match(\"/\$forbid/i\", \$input)) {
 >
