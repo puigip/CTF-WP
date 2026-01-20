@@ -46,7 +46,7 @@ dự đoán thì thử khai thác lỗ hổng xxe ở trường dữ l
 hiện thông báo bạn đã chọn đáp án X (với X là giá trị của trường answer
 )
 
-Và ta đọc src /app/app.py thì có được tên cờ
+Và ta đọc src /app/app.py (thực ra ngồi mò rất nhiều các đường dẫn , thư mục phổ biến toi mất đâu đó tầm tiếng 1h ) thì có được tên cờ
 
 <img src="./images/media/image5.png"
 style="width:6.5in;height:1.95625in"
