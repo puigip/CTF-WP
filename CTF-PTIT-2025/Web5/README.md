@@ -18,13 +18,13 @@ người dùng – không nhớ rõ lắm nma font-end kiểu dạng dươ
 
 Và sau khi click vào 1 đáp án sẽ có alert cảnh báo “Bạn đã chọn đáp án
 X”
-
+Dưới đây là gói tin http-request tương ứng 
 <img src="./images/media/image1.png"
 style="width:6.5in;height:3.62708in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Vì bài này nó có gợi ý json nên tui để í tới phần header của gói tin
-http có trường Content-type :application/json . Tui thử đổi trường này
+http có trường Content-type :application/json. Tui thử đổi trường này
 thành dạng dữ liệu khác( image/jpeg ) gửi lại gói tin và nhận được kết
 quả
 
