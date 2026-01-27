@@ -443,10 +443,9 @@ trọng cần phải hiểu nhé 2 bước cơ bản như dưới đây thôi**
   chạy xuống bước tiếp theo mà không kiểm tra backlist và whitelist** .
   Mọi người cũng nên tìm hiểu lại hàm find_class mặc định của pickle nhé
 
-        Bước 2 : mặc định nó sẽ import module rồi getattr(module, name) để lấy object
+       Bước 2 : mặc định nó sẽ import module rồi getattr(module, name) để lấy object
   (hàm/class) tương ứng
 
-<!-- -->
 =>  Đây là bước biến "nt" + "system" thành đúng function nt.system (hoặc
   "builtins"+"list" thành builtins.list, v.v.)
 Mọi người cố gắng hiểu quá trình unpickle (loads/load) nhất là đoạn hàm
