@@ -2,23 +2,23 @@
 
 [MỤC LỤC [2](#_Toc220462375)]
 
-[1.1 Nhận xét cấu trúc web site như sau :
+[1 Nhận xét cấu trúc web site như sau :
 [3](#_Toc220462376)]
 
-[1.2 Tấn công ORM injection : [3](#_Toc220462377)]
+[2 Tấn công ORM injection : [3](#_Toc220462377)]
 
-[1.3 Pickle Deserialization Attack [9](#_Toc220462378)]
+[3 Pickle Deserialization Attack [9](#_Toc220462378)]
 
-[1.3.1 Lí thuyết pickle sẽ đơn giản như sau
+[3.1 Lí thuyết pickle sẽ đơn giản như sau
 [10](#_Toc220462379)]
 
-[1.3.2 opcode là gì– cái để chúng ta có thể unpickle =))
+[3.2 opcode là gì– cái để chúng ta có thể unpickle =))
 [12](#_Toc220462380)]
 
-[1.3.3 quá trình load/loads nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng
+[3.3 quá trình load/loads nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng
 nếu object có hàm \_\_reduce\_\_) [13](#_Toc220462381)]
 
-[1.3.4 Thực hiện tấn công vào web [14](#_Toc220462382)]
+[3.4 Thực hiện tấn công vào web [14](#_Toc220462382)]
 
 Bài Web4 này là bài có độ khó cao nhất trong phần thi web và nó cho biết
 src - tấn công whitebox ở bài này nó chỉ cho gợi ý “opcode ?”
