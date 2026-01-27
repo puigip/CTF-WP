@@ -433,7 +433,7 @@ ra từ \_\_reduce\_\_ / \_\_reduce_ex\_\_ lúc dump), thì quá trình
 
 **+ Giai đoạn 2: Resolve callable bằng find_class(module, name) Cái này rất quan
 trọng cần phải hiểu nhé 2 bước cơ bản như dưới đây thôi**
-        Bước 1 : lấy module và name (string) từ stream/stack gọi:  
+        Bước 1 : Lấy module và name (string) từ stream/stack gọi:  
   **find_class(module, name) =\> nó sẽ đọc các string trong stack và giá
   trị của modul = “nt” và name= “system” =\> Ở sandbox trong backend nó
   có build lại hàm find_class của class Unpickle với blacklist và
@@ -443,8 +443,7 @@ trọng cần phải hiểu nhé 2 bước cơ bản như dưới đây thôi**
   chạy xuống bước tiếp theo mà không kiểm tra backlist và whitelist** .
   Mọi người cũng nên tìm hiểu lại hàm find_class mặc định của pickle nhé
 
-       Bước 2 : mặc định nó sẽ import module rồi getattr(module, name) để lấy object
-  (hàm/class) tương ứng
+      Bước 2 : Mặc định nó sẽ import module rồi getattr(module, name) để lấy object (hàm/class) tương ứng
 
 =>  Đây là bước biến "nt" + "system" thành đúng function nt.system (hoặc
   "builtins"+"list" thành builtins.list, v.v.)
