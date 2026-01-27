@@ -340,7 +340,7 @@ Ta kiểm tra file sandbox.py
 style="width:6.5in;height:2.77639in"
 alt="A computer screen shot of text AI-generated content may be incorrect." />
 
-4.  <span id="_Toc220462379" class="anchor"></span>Lí thuyết pickle sẽ
+3.1.  <span id="_Toc220462379" class="anchor"></span>Lí thuyết pickle sẽ
     đơn giản như sau
 
 Đến đây mọi người đọc code và tìm hiểu về modul pickle của python ( link
@@ -364,8 +364,8 @@ RestrictedUnpickler khai báo kế thừa – Mục đích tác giả có 
 và chèn các blacklist whitelist như 1 biện pháp phòng thủ cho class
 \_Unpickle gốc .
 
-5.  <span id="_Toc220462380" class="anchor"></span>opcode là gì– cái để
-    chúng ta có thể unpickle =))
+3.2.  <span id="_Toc220462380" class="anchor"></span>opcode là gì– cái để
+    chúng ta có thể unpickle 
 
 \- Vậy đọc 1 thôi 1 hồi thì cơ bản mình sẽ làm ví dụ như sau
 <img src="./images/media/image12.png"
@@ -399,7 +399,7 @@ linux thì là “os.system(“echo hacker!”)” và trả lại kq sau khi lo
 sao cần phải hiểu vì tí nữa tôi sẽ chỉ injection vào các pickle byte này
 nên cần khai báo đúng quy tắc
 
-6.  <span id="_Toc220462381" class="anchor"></span>quá trình load/loads
+3.3.  <span id="_Toc220462381" class="anchor"></span>quá trình load/loads
     nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng nếu object có hàm
     \_\_reduce\_\_)
 
@@ -481,7 +481,7 @@ Kết quả result được push lại lên stack như “object đã được r
 Mọi người cố gắng hiểu quá trình unpickle (loads/load) nhất là đoạn hàm
 find_class nhé đoạn ý rất quan trọng
 
-7.  <span id="_Toc220462382" class="anchor"></span>Thực hiện tấn công
+3.4.  <span id="_Toc220462382" class="anchor"></span>Thực hiện tấn công
     vào web
 
 Modul được phép trong white list
