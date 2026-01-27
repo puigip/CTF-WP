@@ -26,7 +26,7 @@ src - tấn công whitebox ở bài này nó chỉ cho gợi ý “opcode
 1.  <span id="_Toc220462376" class="anchor"></span>Nhận xét cấu trúc web
     site như sau :
 
-1\) Tổng quan cấu trúc thư mục:
+* Tổng quan cấu trúc thư mục:
 
 Root (thư mục gốc / )
 
@@ -38,7 +38,7 @@ Root (thư mục gốc / )
 
 - Dockerfile → chạy bằng Docker
 
-2\) Backend Django (phần xử lý)
+*  Backend Django (phần xử lý)
 
 registration/ (Project Django)
 
@@ -62,7 +62,7 @@ app/ (Django app)
 
 - sandbox.py → có chức năng unpickle() (liên quan xử lý admin)
 
-3\) Routing (URL chạy như nào)
+* Routing (URL chạy như nào)
 
 Trong registration/urls.py web của bạn có các route:
 
