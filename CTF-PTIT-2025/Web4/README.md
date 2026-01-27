@@ -2,28 +2,28 @@
 
 [MỤC LỤC [2](#_Toc220462375)]
 
-[1 Nhận xét cấu trúc web site như sau :
-[3](#_Toc220462376)]
+**[1 Nhận xét cấu trúc web site như sau :
+[3](#_Toc220462376)]**
 
-[2 Tấn công ORM injection : [3](#_Toc220462377)]
+**[2 Tấn công ORM injection : [3](#_Toc220462377)]**
 
-[3 Pickle Deserialization Attack [9](#_Toc220462378)]
+**[3 Pickle Deserialization Attack [9](#_Toc220462378)]**
 
-[3.1 Lí thuyết pickle sẽ đơn giản như sau
-[10](#_Toc220462379)]
+**[3.1 Lí thuyết pickle sẽ đơn giản như sau
+[10](#_Toc220462379)]**
 
-[3.2 opcode là gì– cái để chúng ta có thể unpickle =))
-[12](#_Toc220462380)]
+**[3.2 opcode là gì– cái để chúng ta có thể unpickle =))
+[12](#_Toc220462380)]**
 
-[3.3 quá trình load/loads nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng
-nếu object có hàm \_\_reduce\_\_) [13](#_Toc220462381)]
+**[3.3 quá trình load/loads nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng
+nếu object có hàm \_\_reduce\_\_) [13](#_Toc220462381)]**
 
-[3.4 Thực hiện tấn công vào web [14](#_Toc220462382)]
+**[3.4 Thực hiện tấn công vào web [14](#_Toc220462382)]**
 
 Bài Web4 này là bài có độ khó cao nhất trong phần thi web và nó cho biết
 src - tấn công whitebox ở bài này nó chỉ cho gợi ý “opcode ?”
 
-1.  <span id="_Toc220462376" class="anchor"></span>Nhận xét cấu trúc web
+**1.**  <span id="_Toc220462376" class="anchor"></span>Nhận xét cấu trúc web
     site như sau :
 
 * Tổng quan cấu trúc thư mục:
@@ -74,7 +74,7 @@ Trong registration/urls.py web của bạn có các route:
 | /admin/  | Trang admin (chỉ staff)    |
 | /logout/ | Đăng xuất                  |
 
-2.  <span id="_Toc220462377" class="anchor"></span>Tấn công ORM
+**2.**  <span id="_Toc220462377" class="anchor"></span>Tấn công ORM
     injection :
 
 Tôi tạo 1 tài khoản (username:pass)=a:123
@@ -364,7 +364,7 @@ RestrictedUnpickler khai báo kế thừa – Mục đích tác giả có 
 và chèn các blacklist whitelist như 1 biện pháp phòng thủ cho class
 \_Unpickle gốc .
 
-3.2.  <span id="_Toc220462380" class="anchor"></span>opcode là gì– cái để
+**3.2.**  <span id="_Toc220462380" class="anchor"></span>opcode là gì– cái để
     chúng ta có thể unpickle 
 
 \- Vậy đọc 1 thôi 1 hồi thì cơ bản mình sẽ làm ví dụ như sau
@@ -399,7 +399,7 @@ linux thì là “os.system(“echo hacker!”)” và trả lại kq sau khi lo
 sao cần phải hiểu vì tí nữa tôi sẽ chỉ injection vào các pickle byte này
 nên cần khai báo đúng quy tắc
 
-3.3.  <span id="_Toc220462381" class="anchor"></span>quá trình load/loads
+**3.3.**  <span id="_Toc220462381" class="anchor"></span>quá trình load/loads
     nó sẽ diễn ra như nào ( lưu ý nó chỉ đúng nếu object có hàm
     \_\_reduce\_\_)
 
@@ -420,24 +420,23 @@ ra từ \_\_reduce\_\_ / \_\_reduce_ex\_\_ lúc dump), thì quá trình
 
 **+ Unpickler đọc byte stream theo opcode (stack machine)**
 
-- Unpickler.load() đọc từng opcode và thao tác trên **stack**.
+- Unpickler.load() đọc từng opcode và thao tác trên stack
 
-- Với object kiểu reduction, trong stream thường sẽ có các bước kiểu:
+- Với object kiểu reduction, trong stream thường sẽ có các giai đoạn kiểu:
 
   1.  “đưa module + name lên stack”
 
-  2.  resolve thành **callable**
+  2.  resolve thành callable - Cố gắng hiểu kĩ giai đoạn này mình chỉ giải thích ở giai đoạn này 
 
-  3.  đưa **args** lên stack
+  3.  đưa args lên stack
 
   4.  tạo tuple args
 
   5.  gọi callable
 
-**+ Resolve callable bằng find_class(module, name) Cái này rất quan
+**+ Giai đoạn 2: Resolve callable bằng find_class(module, name) Cái này rất quan
 trọng cần phải hiểu nhé 2 bước cơ bản như dưới đây thôi**
-
-- lấy module và name (string) từ stream/stack gọi:  
+        Bước 1 : lấy module và name (string) từ stream/stack gọi:  
   **find_class(module, name) =\> nó sẽ đọc các string trong stack và giá
   trị của modul = “nt” và name= “system” =\> Ở sandbox trong backend nó
   có build lại hàm find_class của class Unpickle với blacklist và
@@ -447,41 +446,16 @@ trọng cần phải hiểu nhé 2 bước cơ bản như dưới đây thôi**
   chạy xuống bước tiếp theo mà không kiểm tra backlist và whitelist** .
   Mọi người cũng nên tìm hiểu lại hàm find_class mặc định của pickle nhé
 
-- mặc định nó sẽ import module rồi getattr(module, name) để lấy object
+        Bước 2 : mặc định nó sẽ import module rồi getattr(module, name) để lấy object
   (hàm/class) tương ứng
 
 <!-- -->
-
-- Đây là bước biến "nt" + "system" thành đúng function nt.system (hoặc
+=>  Đây là bước biến "nt" + "system" thành đúng function nt.system (hoặc
   "builtins"+"list" thành builtins.list, v.v.)
-
-**+ Tạo args tuple**
-
-Tiếp theo stream sẽ chứa dữ liệu tham số (vd
-string/number/list/bytes).  
-Unpickler dựng chúng lên stack rồi dùng opcode TUPLE, TUPLE1/2/3… để gom
-lại thành **args tuple**.
-
-Ở ví dụ trên: string trong stack là "echo Hacked!" → ("echo Hacked!",)
-
-**+ Gọi callable bằng opcode REDUCE**
-
-Khi gặp opcode REDUCE (R), Unpickler sẽ:
-
-- pop args_tuple ( lúc này nó có giá trị = “echo hacker!”)
-
-- pop callable
-
-- thực thi đúng ý nghĩa reduction:  
-  **result = callable(\*args_tuple)** . Đây là điểm quan trọng: **trong
-  lúc load, pickle có thể gọi hàm**
-
-Kết quả result được push lại lên stack như “object đã được reconstruct”.
-
 Mọi người cố gắng hiểu quá trình unpickle (loads/load) nhất là đoạn hàm
 find_class nhé đoạn ý rất quan trọng
 
-3.4.  <span id="_Toc220462382" class="anchor"></span>Thực hiện tấn công
+**3.4.**  <span id="_Toc220462382" class="anchor"></span>Thực hiện tấn công
     vào web
 
 Modul được phép trong white list
