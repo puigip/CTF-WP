@@ -311,7 +311,7 @@ là(0up8XDN9Uz4Qw5fcVXJYdzMSN8Nr33ZfKgLjiHrmoxF7NQ66L045lC6UernscZEbryLHb0WKjey
 
 Như vậy trên đây là thực thi tấn công ORM injection
 
-3.  <span id="_Toc220462378" class="anchor"></span>Pickle
+**3.**  <span id="_Toc220462378" class="anchor"></span>Pickle
     Deserialization Attack
 
 Tiếp theo tới phần tấn công tuần tự hóa – giải tuần tự hóa
