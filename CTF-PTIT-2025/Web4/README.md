@@ -337,7 +337,7 @@ Ta kiểm tra file sandbox.py
 style="width:6.5in;height:2.77639in"
 alt="A computer screen shot of text AI-generated content may be incorrect." />
 
-3.1.  <span id="_Toc220462379" class="anchor"></span>Lí thuyết pickle sẽ
+**3.1.**  <span id="_Toc220462379" class="anchor"></span>Lí thuyết pickle sẽ
     đơn giản như sau
 
 Đến đây mọi người đọc code và tìm hiểu về modul pickle của python ( link
