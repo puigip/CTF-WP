@@ -1,7 +1,4 @@
-<span id="_Toc220462375" class="anchor"></span>MỤC LỤC
-
-[MỤC LỤC [2](#_Toc220462375)]
-
+<span id="_Toc220462375" class="anchor"></span>
 **[1 Nhận xét cấu trúc web site như sau :
 [3](#_Toc220462376)]**
 
