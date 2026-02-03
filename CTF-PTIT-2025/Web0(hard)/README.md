@@ -68,9 +68,9 @@ regex**.
 thường).
 
 \+ Nghĩa là: bất kỳ đoạn nào trong \$input khớp với **biểu thức regex
-\$forbid** → sẽ bị chặn.
+$forbid** → sẽ bị chặn.
 
-*[Biến \$forbid]{.underline}*
+
 
 \+ Biến \$forbid được xây dựng như sau
 
@@ -169,20 +169,17 @@ OKE sang tab intruder của burpsuite ta có thể check độ dài có thể c�
 username
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image10.png){width="6.5in"
-height="1.5097222222222222in"}
+incorrect.](./media/media/image10.png)
 
 Set payload
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image11.png){width="5.528949037620298in"
-height="4.191013779527559in"}
+incorrect.](./media/media/image11.png)
 
 Oke bắt đầu attack và kq có đc như sau
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image12.png){width="6.5in"
-height="5.105555555555555in"}
+incorrect.](./media/media/image12.png)
 
 Ở đây thì có thể dựa vào chuỗi trả vè ở body http respone còn tôi dựa
 vào length, oke kq cho ra có 2 giá trị thỏa mãn 3 và 5
@@ -195,8 +192,7 @@ Bây giờ ta sẽ check độ dài password tương tự như check username th
 có kq trả về như sau
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image13.png){width="6.5in"
-height="3.972916666666667in"}
+incorrect.](./media/media/image13.png)
 
 Ta có 4 loại độ dài mật khẩu thỏa mãn là 5 , 7 , 10 ,12 =)) .4 loại độ
 dài mật khẩu thì ít nhất là có 4 bản ghi rồi có thể có 2 or nhiều bản
@@ -208,13 +204,11 @@ tương ứng là bao nhiêu
 Với câu truy vấn như sau
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image14.png){width="6.5in"
-height="1.5902777777777777in"}
-
+incorrect.](./media/media/image14.png)
 Kết quả nhận được
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image15.png){width="6.5in" height="3.75in"}
+incorrect.](./media/media/image15.png)
 
 Length(password) = 5 =\> length(username) =5
 
@@ -232,15 +226,12 @@ có thể là gì
 Payload sau
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image16.png){width="6.5in"
-height="2.1791666666666667in"}
+incorrect.](./media/media/image16.png)
 
 KQ nhận được
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image17.png){width="6.5in"
-height="4.323611111111111in"}
-
+incorrect.](./media/media/image17.png)
 Chữ 'a' là chữ cái đầu username , của bản ghi có length(username) = 12
 và username = 5
 
@@ -254,17 +245,14 @@ nó có theer là b x y ) (Tôi đặt là \_)
 Oke tiếp tục bây giờ test kí tự thứ 2
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image18.png){width="6.429702537182852in"
-height="3.324760498687664in"}
-
+incorrect.](./media/media/image18.png)
 Ta nhận được chữ "d" thỏa mãn cứ tiếp tục như vậy ta có chuỗi "admin"
 ứng với length (password) = 12
 
 Vì cũng khá dài nên tôi tóm tắt kết quả
 
 ![A number and arrows on a black background AI-generated content may be
-incorrect.](./media/media/image19.png){width="4.135994094488189in"
-height="1.6773173665791776in"}
+incorrect.](./media/media/image19.png)
 
 Username có độ dài là 3 thì ta chỉ có thể đặt "\_"
 
@@ -273,31 +261,25 @@ Bây giờ ta sẽ check password tương ứng với từng username
 Tôi sẽ chọn username = admin với câu truy vấn như sau
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image20.png){width="6.5in"
-height="0.8145833333333333in"}
+incorrect.](./media/media/image20.png)
 
 Oke kí tự đầu tiên là chữ n
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image21.png){width="6.5in" height="3.45625in"}
-
+incorrect.](./media/media/image21.png)
 Tiếp theo là chữ o
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image22.png){width="6.5in"
-height="3.5145833333333334in"}
+incorrect.](./media/media/image22.png)
 
 Tiếp theo là chữ t
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image23.png){width="6.5in"
-height="4.165972222222222in"}
-
+incorrect.](./media/media/image23.png)
 Tiếp theo
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/media/image24.png){width="6.5in"
-height="4.320833333333334in"}
+incorrect.](./media/media/image24.png)
 
 KQ trả về k có gói tin nào "welcome \\o/" chứng tỏ kí tự tiếp theo là 1
 trong 3 kí tự cấm b x y nên ta sẽ đặt kí tự đó là "\_"
