@@ -525,7 +525,7 @@ alt="A screenshot of a computer program AI-generated content may be incorrect." 
 Sau khi chạy thử thì kết quả vẫn thành công cho thấy ta inject hợp lệ và
 ý tưởng đã đúng
 
-Res = none là bởi vì hàm print ở class u nó k phải hàm có giá trị trả về
+Res = none là bởi vì hàm print ở class u nó k phải hàm có giá trị trả về 
 nma các bạn vẫn thấy nó print hehe tức là mình đã thành công thực thi
 được code
 
@@ -542,7 +542,7 @@ Kết quả khi gửi lên web
 style="width:6.5in;height:3.85764in"
 alt="A screenshot of a video game AI-generated content may be incorrect." />
 
-Ta nhận được None  vì print k có giá trị trả về \n
+Ta nhận được None  vì print k có giá trị trả về <br>
 <img src="./images/media/image21.png"
 style="width:6.5in;height:3.60833in"
 alt="A screen shot of a computer program AI-generated content may be incorrect." />
