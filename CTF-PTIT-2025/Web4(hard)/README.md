@@ -542,7 +542,7 @@ Kết quả khi gửi lên web
 style="width:6.5in;height:3.85764in"
 alt="A screenshot of a video game AI-generated content may be incorrect." />
 
-Ta nhận được None  vì print k có giá trị trả về
+Ta nhận được None  vì print k có giá trị trả về \n
 <img src="./images/media/image21.png"
 style="width:6.5in;height:3.60833in"
 alt="A screen shot of a computer program AI-generated content may be incorrect." />
