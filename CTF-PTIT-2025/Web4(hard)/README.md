@@ -542,11 +542,12 @@ Kết quả khi gửi lên web
 style="width:6.5in;height:3.85764in"
 alt="A screenshot of a video game AI-generated content may be incorrect." />
 
-Ta nhận được None vì <img src="./images/media/image21.png"
+Ta nhận được None  vì print k có giá trị trả về
+<img src="./images/media/image21.png"
 style="width:6.5in;height:3.60833in"
 alt="A screen shot of a computer program AI-generated content may be incorrect." />
 Nhìn lại code backend biến result nhận kq từ unpickle tức là nhận đc
-None vì print k có giá trị trả về
+
 
 Mặc dù đã vượt qua hàm find_class nhưng mà còn vấn đề nữa là cần phải
 vượt hàm unpickle trong hàm unpickle nó có 1 vòng for
