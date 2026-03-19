@@ -558,7 +558,6 @@ tra phải vượt qua hết backlist_name , payload byte của chúng ta chắc
 chắn phải đi qua
 
 Bài viết cũng đã quá dài rồi các bạn đọc tới đây có thể thử tự vượt qua
-– mình đã ngồi mất 7 ngày để làm bài này
 
 **Payload để đọc được thư mục ở /**
 
