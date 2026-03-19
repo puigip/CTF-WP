@@ -33,7 +33,7 @@ KQ nhận được :
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/media/image4.png)
 
-OKE đến đây sau 3 ngày ngồi mò các cách bypass backlist để có thể sử
+OKE đến đây ngồi mò các cách bypass backlist để có thể sử
 dụng 1 số hàm đặc biệt thì không cho ra kết quả khả quan . Ngồi đọc lại
 src code thì thấy blacklist bị lỏng lẻo thiết kế sai
 
